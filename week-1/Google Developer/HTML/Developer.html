@@ -22,18 +22,20 @@
 
         <nav>
             <ul>
-                <li>Products</li>
-                <li>Events</li>
-                <li>Learn</li>
-                <li>Developer Communities</li>
-                <li>Developer Profile</li>
-                <li>Blog</li>
+                <li id="li1">Products</li>
+                <li id="li2">Events</li>
+                <li id="li3">Learn</li>
+                <li id="li4">Developer Communities</li>
+                <li id="li5">Developer Profile</li>
+                <li id="li6">Blog</li>
             </ul>
 
             <!-- Search bar -->
             <div class="search-bar">
-                <i class="fa-solid fa-magnifying-glass search-bar-i"></i>
                 <input type="text" placeholder="Seach">
+                <div class="search-bar-i">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
         </nav>
 
@@ -57,19 +59,21 @@
     <!-- banner -->
     <div class="banner">
         <!-- banner item -->
-        <div class="banner-item">
-            <div class="banner-item-text">
-                <h3>Google for Startups Accelerator: Women Founders</h3>
-            <p>
-                Apply to a 10-week digital accelerator program for women founders leading high potential Seed to Series A tech startups based in the U.S. and Canada by July 28.
-            </p>
+        <div class="banner-wrap">
+            <div class="banner-item">
+                <div class="banner-item-text">
+                    <h3>Google for Startups Accelerator: Women Founders</h3>
+                <p>
+                    Apply to a 10-week digital accelerator program for women founders leading high potential Seed to Series A tech startups based in the U.S. and Canada by July 28.
+                </p>
+                </div>
+                
+                <button>Apply now</button>
             </div>
-            
-            <button>Apply now</button>
-        </div>
-        <!-- banner img -->
-        <div class="banner-img">
-            <img src="https://developers.google.com/events/images/women-founders_1440.png" alt="banner img">
+            <!-- banner img -->
+            <div class="banner-img">
+                <img src="https://developers.google.com/events/images/women-founders_1440.png" alt="banner img">
+            </div>
         </div>
     </div>
 
@@ -194,8 +198,13 @@
         <div class="wraps">
             <div class="wrap-items items1">
                 <div class="wrap-item item1">
-                    <img src="https://developers.google.com/site-assets/images/home/card-header-grid_1440.png" alt="" class="grid-illustrator">
-                    <img src="	https://developers.google.com/site-assets/images/home/events-graphic.png" alt="" class="illustrator">
+                    <div class="grid-illustrator">
+                        <img src="https://developers.google.com/site-assets/images/home/card-header-grid_1440.png" alt="" class="grid-illustrator grid-illustrator1">
+                    </div>
+
+                    <div class="illustrator">
+                        <img src="	https://developers.google.com/site-assets/images/home/events-graphic.png" alt="" class="illustrator illustrator1">
+                    </div>
                 </div>
                 <div class="wrap-item item2">
                     <a href="#" class="item-title">Event</a>
@@ -206,8 +215,8 @@
 
             <div class="wrap-items items2">
                 <div class="wrap-item item1">
-                    <img src="https://developers.google.com/site-assets/images/home/card-header-grid_1440.png" alt="" class="grid-illustrator">
-                    <img src="	https://developers.google.com/site-assets/images/home/community-graphic.png" alt="" class="illustrator">
+                    <img src="https://developers.google.com/site-assets/images/home/card-header-grid_1440.png" alt="" class="grid-illustrator grid-illustrator2">
+                    <img src="	https://developers.google.com/site-assets/images/home/community-graphic.png" alt="" class="illustrator illustrator2">
                 </div>
                 <div class="wrap-item item2">
                     <a href="#" class="item-title">Community</a>
@@ -218,25 +227,228 @@
         </div>
     </section>
 
+    <!-- news -->
     <section class="news">
+        <h2>News</h2>
 
+        <div class="news-wrap">
+            <div class="news-items">
+                <div class="news-item new-item1">
+                    <div class="news-img">
+                        <img src="https://developer.android.com/images/brand/Android_Robot_480.png" alt="">
+                    </div>
+                    <div class="news-text">
+                        <a href="#">Compose 1.2 Beta</a>
+                        <p>Learn about the features and APIs added in the new 1.2 beta release.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+
+                <div class="news-item new-item2">
+                    <div class="news-img">
+                        <img src="https://developers.google.com/homepage-assets/images/material-design_480.png" alt="">
+                    </div>
+                    <div class="news-text">
+                        <a href="#">Design for everyone</a>
+                        <p>Create beautiful, usable experiences that scale with Material Design 3's new accessibility guidance and patterns.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+
+                <div class="news-item new-item3">
+                    <div class="news-img">
+                        <img src="https://developers.google.com/site-assets/images/news/play_logo_480.png" alt="">
+                    </div>
+                    <div class="news-text">
+                        <a href="#">Google Play news from I/O</a>
+                        <p>Get the latest updates to help grow your business and build safer apps.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+
+                <div class="news-item new-item4">
+                    <div class="news-img">
+                        <img src="	https://fonts.gstatic.com/s/i/productlogos/wallet/v8/192px.svg" alt="">
+                    </div>
+                    <div class="news-text">
+                        <a href="#">New Google Wallet documentation</a>
+                        <p>Explore new use cases and developer documentation for Google Wallet.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+
+                <div class="news-item new-item5">
+                    <div class="news-img">
+                        <img src="	https://developers.google.com/site-assets/logo-flutter.svg" alt="">
+                    </div>
+                    <div class="news-text">
+                        <a href="#">Introducing Flutter 3</a>
+                        <p>Create high-quality, beautiful experiences across six platforms from a single codebase.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+
+                <div class="news-item new-item6">
+                    <div class="news-img">
+                        <img src="	https://developers.google.com/homepage-assets/images/ar-core_480.png" alt="">
+                    </div>
+                    <div class="news-text">
+                        <a href="#">Discover the ARCore Geospatial API</a>
+                        <p>Build location-based, immersive AR experiences at world scale. Available on Android and iOS.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+
+                <div class="news-item new-item7">
+                    <div class="news-img">
+                        <img src="	https://developers.google.com/site-assets/developers-logo-color.svg" alt="">
+                    </div>
+                    <div class="news-text">
+                        <a href="#">Develop with Google Dev Library</a>
+                        <p>Learn to develop with 900+ community submitted projects on Android, Cloud, and more.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+
+                <div class="news-item new-item8">
+                    <div class="news-img">
+                        <img src="https://developers.google.com/site-assets/silicon.svg" alt="" id="img8">
+                    </div>
+                    <div class="news-text">
+                        <a href="#">Build your own silicon</a>
+                        <p>Submit open source integrated circuit designs to get manufactured at no cost with Google's Open MPW shuttle program.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
+    <!-- expert section -->
     <section class="expert">
-        
+        <h2>Find a Google developer expert</h2>
+        <p>Browse our directory of developer experts who have been recognized by Google for their depth of tech knowledge and skills.</p>
+        <button>View all developer experts</button>
     </section>
 
-    <footer>
+    <!-- about us -->
+    <section>
         <div class="footer-aboutus">
+            <div class="aboutus">
+                <div class="footer-person">
+                    <div class="footer-person1">
+                        <img src="https://sfo2.digitaloceanspaces.com/advocu/gde/profile-photos/2021/09/24/9d227a42-8cad-4a55-a624-d4d7d299d938.jpg" alt="">
+                        <h3>Femi Taiwo</h3>
+                        <p>Lagos Nigeria</p>
+                        <p>Expertise:</p>
+                        <span>Google Cloud Platform</span>
+                    </div>
 
+                    <button>View Profile</button>
+                </div>
+                <div class="footer-person">
+                    <div class="footer-person2">
+                        <img src="	https://lh3.googleusercontent.com/-wvqE4VTk1kA/AAAAAAAAAAI/AAAAAAAADvA/y46FlzylVY4/s172-c/photo.jpg" alt="">
+                        <h3>Femi Taiwo</h3>
+                        <p>Lagos Nigeria</p>
+                        <p>Expertise:</p>
+                        <span>Google Cloud Platform</span>
+                    </div>
+
+                    <button>View Profile</button>
+                </div>
+                <div class="footer-person">
+                    <div class="footer-person3">
+                        <img src="	https://lh6.googleusercontent.com/-wRHAEkcoRP8/AAAAAAAAAAI/AAAAAAAAAwE/aSA02YyC1Ik/s172-c/photo.jpg" alt="">
+                        <h3>Femi Taiwo</h3>
+                        <p>Lagos Nigeria</p>
+                        <p>Expertise:</p>
+                        <span>Google Cloud Platform</span>
+                    </div>
+                    
+                    <button>View Profile</button>
+                </div>
+                <div class="footer-person">
+                    <div class="footer-person4">
+                        <img src="https://sfo2.digitaloceanspaces.com/advocu/gde/profile-photos/2021/05/20/ed6b019e-f91e-4f86-812e-e58451ff2765.jpg" alt="">
+                        <h3>Femi Taiwo</h3>
+                        <p>Lagos Nigeria</p>
+                        <p>Expertise:</p>
+                        <span>Google Cloud Platform</span>
+                    </div>
+
+                    <button>View Profile</button>
+                </div>
+            </div>
         </div>
+        <hr />
+    </section>
 
-        <div class="footer-products">
-
+    <!-- footer detail -->
+    <footer>
+        <div class="footer-detail">
+            <div class="connect">
+                <h3>Connect</h3>
+                <a href="#">Blog</a>
+                <a href="#">Facebook</a>
+                <a href="#">Medium</a>
+                <a href="#">Twitter</a>
+                <a href="#">Youtube</a>
+            </div>
+            <div class="programs">
+                <h3>Programs</h3>
+                <a href="#">Women Techmakers</a>
+                <a href="#">Google Developer Groups</a> 
+                <a href="#">Google Developers Experts</a>
+                <a href="#">Accelerators</a>
+                <a href="#">Google Developer Student Clubs</a>
+            </div>
+            <div class="developer-console">
+                <h3>Developer consoles</h3>
+                <a href="#">Google API Console</a>
+                <a href="#">Google Cloud Platform Console</a>
+                <a href="#">Google Play Console</a>
+                <a href="#">Firebase Console</a>
+                <a href="#">Actions on Google Console</a>
+                <a href="#">Cast SDK Developer Console</a>
+                <a href="#">Chrome Web Store Dashboard</a>
+            </div>
         </div>
-
+        
+        <!-- footer terms -->
         <div class="footer-terms">
-
+            <hr />
+            <nav>
+                <img src="../img/google developer icon.svg" alt="">
+                <ul>
+                    <li>Android</li>
+                    <li>Chrome</li>
+                    <li>Firebase</li>
+                    <li>Google Cloud Platform</li>
+                    <li>All products</li>
+                </ul>
+            </nav>
+            <hr />
+        </div>
+        <div class="footer-sub">
+            <div class="footer-sub1">
+                <div class="footer-sub1-privacy">
+                    <ul>
+                        <li>Terms</li>
+                        <li>|</li>
+                        <li>Privacy</li>
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <p>Sign up for the Google Developers newsletter
+                    </p>
+                </div>
+            </div>
+            <button class="sub">Subscribe</button>
+            <button class="language">
+                <i class="fa-solid fa-globe"></i>English<i class="fa-solid fa-caret-down"></i>
+            </button>
         </div>
     </footer>
 </body>
