@@ -45,8 +45,8 @@ function render(data) {
     )
     .join("");
   APIdata.innerHTML = html;
-  console.log(data);
 }
-ajax("https://appworks-school.github.io/Remote-Aassigiment-Data/products").then(
+
+ajax("https://appworks-school.github.io/Remote-Assignment-Data/products").then(
   (data) => render(data)
 );
