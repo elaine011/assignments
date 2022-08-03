@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-End Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 50vw;
+        height: 50vh;
+        margin: 5rem auto;
+        text-align: center;
+      }
+      .input {
+        padding: 0.3rem 1rem;
+        margin: 3rem 0;
+      }
+      .submit {
+        padding: 0.3rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sum of numbers</h1>
+
+      <input type="text" placeholder="Enter your number here." class="input" />
+
+      <button type="submit" class="submit">Result</button>
+
+      <h3></h3>
+    </div>
+
+    <script>
+      const btn = document.querySelector(".submit");
+      const h3 = document.querySelector("h3");
+
+      function sum() {
+        const input = document.querySelector(".input");
+        let url;
+
+        if (input.value == "") {
+          url = "http://localhost:3000/getData";
+        } else {
+          url = `http://localhost:3000/getData?number=${input.value}`;
+        }
+
+        fetch(url)
+          .then((res) => res.text())
+          .then((data) => (h3.innerHTML = `Result is: ${data}`));
+      }
+
+      btn.addEventListener("click", sum);
+    </script>
+  </body>
+</html>

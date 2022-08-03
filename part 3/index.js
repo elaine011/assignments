@@ -1,7 +1,8 @@
 // change welcome message
+
 const goodTime = document.querySelector("#welcome");
 
-goodTime.addEventListener("click", function () {
+goodTime.addEventListener("click", () => {
   goodTime.innerHTML = "<h1>Have a good time!</h1>";
 });
 
@@ -10,11 +11,11 @@ const mobileMenu = document.querySelector(".hamburger");
 const hiddenMenu = document.querySelector(".hidden-menu");
 const closeMenu = document.querySelector(".close-menu");
 
-mobileMenu.addEventListener("click", function () {
+mobileMenu.addEventListener("click", () => {
   hiddenMenu.style.display = "block";
 });
 
-closeMenu.addEventListener("click", function () {
+closeMenu.addEventListener("click", () => {
   hiddenMenu.style.display = "none";
 });
 
@@ -22,7 +23,7 @@ closeMenu.addEventListener("click", function () {
 const showContentBox = document.querySelector(".btn");
 const moreContent = document.querySelector(".content2");
 
-showContentBox.addEventListener("click", function () {
+showContentBox.addEventListener("click", () => {
   moreContent.style.display = "block";
 });
 
