@@ -5,23 +5,24 @@ const port = 3000;
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.send("Hello, My Server!!");
+	res.send("Hello, My Server!!");
 });
 
 app.get("/getData", (req, res) => {
-  const number = req.query.number;
+	const number = req.query.number;
 
-  if (number === "xyz") {
-    res.send("Wrong Parameter");
-  } else if (isNaN(number) === false) {
-    const result =
-      ((1 + Number(req.query.number)) * Number(req.query.number)) / 2;
-    res.send(`${result}`);
-  } else {
-    res.send("Lack of Parameter");
-  }
+	if (isNaN(number)) {
+		res.send("Wrong Parameter");
+		if (number === "xyz") {
+			res.send("Lack of Parameter");
+		}
+	} else {
+		const result =
+			((1 + Number(req.query.number)) * Number(req.query.number)) / 2;
+		res.send(`${result}`);
+	}
 });
 
 app.listen(port, () => {
-  console.log("The application is running.");
+	console.log("The application is running.");
 });
