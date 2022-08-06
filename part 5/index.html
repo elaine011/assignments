@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>React Page</title>
+		<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+		<link rel="stylesheet" href="Style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		/>
+
+		<!-- Don't use this in production: -->
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	</head>
+
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel">
+			// Website Title / Logo / Menu
+			class Header extends React.Component {
+				state = {
+					show: "hidden-menu",
+				};
+
+				showMenu() {
+					this.setState({
+						show: "hamburger",
+					});
+				}
+
+				offMenu() {
+					this.setState({
+						show: "hidden-menu",
+					});
+				}
+
+				render() {
+					return (
+						<div>
+							<header>
+								<p>Website Title / Logo</p>
+								<nav>
+									<ul>
+										<li className="item-1">Item 1</li>
+										<li className="item-2">Item 2</li>
+										<li className="item-3">Item 3</li>
+										<li className="item-4">Item 4</li>
+									</ul>
+								</nav>
+
+								<i
+									className="fa-solid fa-bars"
+									id="menu"
+									onClick={this.showMenu.bind(this)}
+								></i>
+								<button className="hidden-menu"></button>
+							</header>
+
+							<ul className={this.state.show}>
+								<li>
+									<i
+										className="fa-solid fa-xmark close-menu"
+										onClick={this.offMenu.bind(this)}
+									></i>
+								</li>
+								<li className="items">Item 1</li>
+								<li className="items">Item 2</li>
+								<li className="items">Item 3</li>
+								<li className="items">Item 4</li>
+							</ul>
+						</div>
+					);
+				}
+			}
+
+			// Welcome Message
+			class Welcome extends React.Component {
+				state = {
+					msg: "Welcome Message",
+				};
+
+				welcomeChange() {
+					this.setState({
+						msg: "Have a good time!",
+					});
+				}
+
+				render() {
+					return (
+						<div
+							id="welcome"
+							className="welcome"
+							onClick={() => this.welcomeChange()}
+						>
+							<h1>{this.state.msg}</h1>
+						</div>
+					);
+				}
+			}
+
+			// Section
+			const Section = (props) => {
+				return (
+					<div className="content">
+						<h2>Section Title</h2>
+
+						<ul className="content-box">
+							<li className="box box-1">
+								<p>Content Box 1</p>
+							</li>
+
+							<li className="box box-2">
+								<p>Content Box 2</p>
+							</li>
+
+							<li className="box box-3">
+								<p>Content Box 3</p>
+							</li>
+
+							<li className="box box-4">
+								<p>Content Box 4</p>
+							</li>
+						</ul>
+					</div>
+				);
+			};
+
+			class Section2 extends React.Component {
+				state = {
+					show: "content2",
+				};
+
+				showSection2() {
+					this.setState({
+						show: "content",
+					});
+				}
+
+				render() {
+					return (
+						<div className="section2">
+							<div className="btn">
+								<button onClick={this.showSection2.bind(this)}>
+									Call to Action
+								</button>
+							</div>
+							<div className={this.state.show}>
+								<ul className="content-box">
+									<li className="box box-1">
+										<p>Content Box 5</p>
+									</li>
+
+									<li className="box box-2">
+										<p>Content Box 6</p>
+									</li>
+
+									<li className="box box-3">
+										<p>Content Box 7</p>
+									</li>
+
+									<li className="box box-4">
+										<p>Content Box 8</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					);
+				}
+			}
+
+			function MyApp() {
+				return (
+					<div>
+						<Header />
+						<Welcome />
+						<Section />
+						<Section2 />
+					</div>
+				);
+			}
+
+			const container = document.getElementById("root");
+			const root = ReactDOM.createRoot(container);
+			root.render(<MyApp />);
+		</script>
+		<!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this section for a production-ready setup with JSX:
+      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
+
+      In a larger project, you can use an integrated toolchain that includes JSX instead:
+      https://reactjs.org/docs/create-a-new-react-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      https://reactjs.org/docs/react-without-jsx.html
+    -->
+	</body>
+</html>
